@@ -10,7 +10,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Activity1 : AppCompatActivity() {
 
-    // Add a different request code for every activity you are starting from here
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

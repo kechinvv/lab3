@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         val navigation = findViewById<BottomNavigationView>(R.id.navigation);
         navigation.setOnItemSelectedListener { item ->
             if (item.itemId == R.id.navigation_about) navController.navigate(R.id.action_global_about)
-            true }
+            true
+        }
     }
 
 

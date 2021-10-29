@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".About">
 
-    <include layout="@layout/toolbar"/>
+    <include layout="@layout/toolbar" />
 
     <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
-       android:layout_marginTop="100dp"
+        android:layout_marginTop="100dp"
         android:text="@string/text_about"
         app:layout_constraintHeight_percent=".6"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -19,6 +19,6 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar"
         app:layout_constraintWidth_percent=".8" />
 
-    <include layout="@layout/bottom"/>
+    <include layout="@layout/bottom" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
