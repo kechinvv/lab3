@@ -12,7 +12,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.nav5.NoActionBar">
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -20,8 +21,9 @@
         </activity>
         <activity
             android:name=".About"
-            android:exported="true"
-            android:theme="@style/Theme.nav5.NoActionBar" />
+            android:parentActivityName=".MainActivity"
+            android:label="About"
+             />
     </application>
 
 </manifest>

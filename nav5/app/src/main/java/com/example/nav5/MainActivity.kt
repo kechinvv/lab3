@@ -2,24 +2,39 @@ package com.example.nav5
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.example.nav5.databinding.MainActivityBinding
+
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var navController: NavController
+    private lateinit var binding: MainActivityBinding
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+
+        binding = MainActivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        val navController = navHostFragment.navController
-        val navigation = findViewById<BottomNavigationView>(R.id.navigation);
-        navigation.setOnItemSelectedListener { item ->
-            if (item.itemId == R.id.navigation_about) navController.navigate(R.id.action_global_about)
-            true
-        }
+        navController = navHostFragment.navController
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        binding.navigation.setupWithNavController(navController)
+
     }
 
 
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
 }
