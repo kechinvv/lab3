@@ -44,8 +44,4 @@
             app:popUpTo="@+id/Fragment2" />
     </fragment>
 
-
-
-
-
 </navigation>

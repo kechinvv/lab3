@@ -15,6 +15,4 @@ class About : AppCompatActivity() {
         onBackPressed()
         return true
     }
-
-
 }
