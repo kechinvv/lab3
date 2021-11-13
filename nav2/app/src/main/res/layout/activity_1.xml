@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity1">
+    android:id="@+id/fragment1">
 
-    <include layout="@layout/toolbar" />
+
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/to2"
+        android:id="@+id/bnToSecond"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="100dp"
-        android:onClick="onButton2Click"
         android:text="@string/to_second"
         android:background="@color/black"
         android:textColor="@color/white"

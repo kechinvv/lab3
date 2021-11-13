@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.nav2">
 
     <application
@@ -12,20 +13,25 @@
         <activity
             android:name=".About"
             android:exported="true"
-            android:theme="@style/Theme.Nav2.NoActionBar"/>
+            tools:node="merge"
+            android:label="About" />
         <activity
             android:name=".Activity3"
             android:exported="true"
-            android:theme="@style/Theme.Nav2.NoActionBar"/>
+            tools:node="merge"
+            android:label="Activity3"
+            android:parentActivityName="com.example.nav2.Activity2" />
         <activity
             android:name=".Activity2"
             android:exported="true"
-            android:theme="@style/Theme.Nav2.NoActionBar"/>
+            tools:node="merge"
+            android:label="Activity2"
+            android:parentActivityName="com.example.nav2.MainActivity" />
         <activity
-            android:name=".Activity1"
+            android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Nav2.NoActionBar">
+            tools:node="merge"
+            android:label="Activity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
