@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
-        binding.navigation.setupWithNavController(navController)
+        binding.navView.setupWithNavController(navController)
 
     }
 
